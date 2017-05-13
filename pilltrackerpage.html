@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Pill Tracker</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <style>
+    /* Remove the navbar's default margin-bottom and rounded borders */
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+      body {background-color: peachpuff; }
+      
+   /*  input[type=button], input[type=submit], input[type=reset] {
+    background-color: white;
+    border: none;
+    color: black;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+         width: 40%; }*/
+         
+        .show{
+            display:block;
+         }
+        .hide{display:none;}
+img:hover {
+    opacity: 0.3;
+}
+     @font-face {
+    font-family: 'BebasNeue';
+          src: url(BebasNeue.otf); }
+
+
+      p {
+          color: black;
+          font-size: 150%;
+    font-family: 'BebasNeue';
+      }
+      
+      h2 {
+         color:black;
+        font-family: 'BebasNeue';
+        font-size: 500%;
+    text-align: center;
+    background-position: center
+}
+
+/* Tip: use width: 100% for full-width buttons */ 
+  
+
+     
+
+      h1
+      {
+        text-align: center;
+      }
+
+      .hidden
+      {
+        display: none;
+      }
+
+      #custom-notification
+      {
+        margin-top: 1em;
+      }
+
+      label
+      {
+        display: block;
+      }
+
+      input[name="title"],
+      textarea
+      {
+        width: 50%;
+      }
+
+      input[name="title"]
+      {
+        height: 2em;
+          width: 50%;
+      }
+
+      textarea
+      {
+        height: 5em;
+      }
+
+      .buttons-wrapper
+      {
+        text-align: center;
+      }
+
+      .button-demo
+      {
+        padding: 0.5em;
+        margin: 1em;
+      }
+
+      #log
+      {
+        height: 200px;
+        width: 100%;
+        overflow-y: scroll;
+        border: 1px solid #333333;
+        line-height: 1.3em;
+          visibility: hidden;
+      }
+
+      .author
+      {
+        display: block;
+        margin-top: 1em;
+      }     
+       @font-face {
+    font-family: 'BebasNeue';
+          src: url(BebasNeue.otf); }
+
+
+      h6 {
+          color: black;
+      font-size: 200%;
+    font-family: 'BebasNeue';
+      }
+      footer {
+      background-color: bisque;
+      color: white;
+      padding: 15px;
+    }
+
+  </style>
+    
+    <script src="jquery-1.12.4.min.js"></script>
+</head>
+    
+    <!--Body-->
+<body>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#"><img src = "clock.png" alt = 'Brand' style = "width:25px;" "height: 25px;"></a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a href="pILL.html">Home</a></li>
+        <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href"">Pill Tracker
+        <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="pilltrackerpage.html">Tracker</a></li>
+          <li><a href="pillgame.html">Game</a></li> 
+        </ul>
+      </li>
+           <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="solution.html">Period Tracker
+        <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="cal.html">Calculate</a></li>
+          <li><a href="periodgame.html">Game</a></li> 
+        </ul>
+      </li>
+          
+        <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="solution.html">Hydration Tracker
+        <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="water.html">Calculate</a></li>
+          <li><a href="watergame.html">Game</a></li> 
+        </ul>
+      </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+          <li><a href="help.html">Help</a></li> </ul>
+    </div>
+  </div>
+</nav>
+
+      <!----------------HEADER-->  
+    
+ <center><h2> <img src = "pills.gif" style = "width:100px;"> PIll TRACKER <img src = "pills.gif" style = "width:100px;"></h2>  </center>
+    
+ 
+    
+    
+  <center><form name="form1">
+<p><b>Pill Name:</b> <input TYPE="TEXT" SIZE="20" NAME="yourname"> &nbsp; &nbsp;
+<b>Side Effects:</b> <input TYPE="TEXT" SIZE="30" NAME="address">  &nbsp; &nbsp;
+<b>Purpose: </b> <input TYPE="TEXT" SIZE="15" NAME="phone">
+</p>
+<p><input TYPE="BUTTON" VALUE="Display" onClick="display();">
+    <input type="reset" value="Add More">  </p>
+</form> </center>  
+    
+<!--------------------------------------CALENDAR-->
+ <center> <iframe src="https://calendar.google.com/calendar/embed?src=t8oend0l391bdcm36g2eqkpehk%40group.calendar.google.com&ctz=America/Los_Angeles" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe> </center>
+   
+    
+    
+
+    
+    
+    <!-------------------------SCRIPT-->
+<script>
+    
+      setInterval(function() {
+    alert("Don't Forget to Check Your Pill Schedule!!");
+}, 1800000);
+    
+function display() {
+  DispWin = window.open('','NewWin', 'toolbar=no,status=no,width=300,height=200')
+  message = "<ul><li><b>Pill Name: </b>" + document.form1.yourname.value;
+  message += "<li><b>Side Effects: </b>" + document.form1.address.value;
+  message += "<li><b>Purpose/Notes: </b>" + document.form1.phone.value + "</ul>";
+  DispWin.document.write(message);
+}
+   function myInsertPic() {
+        var image1 = new Image();
+image1.src = 'pillimage.png';
+document.body.appendChild(image1); 
+   
+   }
+
+</script>
+    
+<!--<h6> <img onclick="myAddInfo()">-->
+ <footer class="container-fluid">
+ 
+    
+      <center><h6>Click on the Google Calendar Button to add your medications to your schedule!</h6></center> <center><h6>It will be synced with your day-to-day schedule.</h6></center>
+</footer>
+    
+     
+    
+</body>
+</html>

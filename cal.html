@@ -1,0 +1,140 @@
+<html>
+<head>
+    
+      <title>Period Tracker</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <link rel = "stylesheet"  href = "pillstyle.css">
+ <style>
+    
+  @font-face {
+    font-family: 'BebasNeue';
+          src: url(BebasNeue.otf); }
+
+
+      h6 {
+          color: black;
+      font-size: 200%;
+    font-family: 'BebasNeue';
+      }
+    
+    </style>
+<script>
+var timer;
+function settimer()
+{
+ clearInterval(timer);
+
+ var timer_month=document.getElementById("month").value;
+ var timer_day=document.getElementById("day").value;
+ var timer_year= parseInt(2016);
+var timer_month = parseInt(timer_month) + 1;
+    
+    var timer_hour= parseInt(12);
+    var timer_min = parseInt(0);
+ /*if(timer_hour=="")timer_hour=0;
+ var timer_min=document.getElementById("min").value;
+ if(timer_min=="")timer_min=0;*/
+
+ var timer_date=timer_month+"/"+timer_day+"/"+timer_year+" "+timer_hour+":"+timer_min;
+ var end = new Date(timer_date); // Arrange values in Date Time Format
+ var now = new Date(); // Get Current date time
+ var second = 1000; // Total Millisecond In One Sec
+ var minute = second * 60; // Total Sec In One Min
+ var hour = minute * 60; // Total Min In One Hour
+ var day = hour * 24; // Total Hour In One Day
+
+    
+    
+    
+ function showtimer() {
+  var now = new Date();
+  var remain = end - now; // Get The Difference Between Current and entered date time
+  if(remain < 0) 
+  {
+   clearInterval(timer);
+   document.getElementById("timer_value").innerHTML = 'Your Period is Here!';
+   return;
+  }
+  var days = Math.floor(remain / day);// Get Remaining DayS
+  var hours = Math.floor((remain % day) / hour); // Get Remaining Hours
+  var minutes = Math.floor((remain % hour) / minute); // Get Remaining Min
+  var seconds = Math.floor((remain % minute) / second); // Get Remaining Sec
+ 
+  document.getElementById("timer_value").innerHTML = days + 'Days ';
+  document.getElementById("timer_value").innerHTML += hours + 'Hrs ';
+  document.getElementById("timer_value").innerHTML += minutes + 'Mins ';
+  document.getElementById("timer_value").innerHTML += seconds + 'Secs';
+ }
+ timer = setInterval(showtimer, 1000); // Display Timer In Every 1 Sec
+}
+    
+
+</script>
+    
+    
+</head>
+<body>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#"><img src = "clock.png" alt = 'Brand' style = "width:25px;" "height: 25px;"></a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a href="pILL.html">Home</a></li>
+        <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href"">Pill Tracker
+        <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="pilltrackerpage.html">Tracker</a></li>
+          <li><a href="pillgame.html">Game</a></li> 
+        </ul>
+      </li>
+           <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="solution.html">Period Tracker
+        <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="cal.html">Calculate</a></li>
+          <li><a href="periodgame.html">Game</a></li> 
+        </ul>
+      </li>
+          
+        <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="solution.html">Hydration Tracker
+        <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="water.html">Calculate</a></li>
+          <li><a href="watergame.html">Game</a></li> 
+        </ul>
+      </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+          <li><a href="help.html">Help</a></li> </ul>
+    </div>
+  </div>
+</nav>
+
+    
+<h2> <img src = "period.gif" style = "width:100px;"> PERIOD TRACKER <img src = "period.gif" style = "width:100px;"></h2>
+    <br><br><br>
+    <center>  <h6> 
+ Month of your last period: <input type="text" id="month" placeholder = "(July = 7)"> &nbsp;&nbsp;
+Date of last period: <input type="text" id="day" placeholder = "(25th = 25)"> <br><br>
+ Cycle Length (Avg #of Days in betweeen them):<input type="text"> <br> <br>
+    Length of Period (#of Days from start to finish):<input type="text" >  </h6> 
+        <br> 
+ <br>
+ <input type="button" value="Submit" onclick="settimer();">  <br><br>
+ <p id="timer_value"></p> </center>
+
+</body>
+</html>

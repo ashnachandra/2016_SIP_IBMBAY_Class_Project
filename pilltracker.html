@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <style>
+    /* Remove the navbar's default margin-bottom and rounded borders */
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+    
+   
+  </style>
+     <link href="http://addtocalendar.com/atc/1.5/atc-style-blue.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<script type="text/javascript">(function () {
+            if (window.addtocalendar)if(typeof window.addtocalendar.start == "function")return;
+            if (window.ifaddtocalendar == undefined) { window.ifaddtocalendar = 1;
+                var d = document, s = d.createElement('script'), g = 'getElementsByTagName';
+                s.type = 'text/javascript';s.charset = 'UTF-8';s.async = true;
+                s.src = ('https:' == window.location.protocol ? 'https' : 'http')+'://addtocalendar.com/atc/1.5/atc.min.js';
+                var h = d[g]('body')[0];h.appendChild(s); }})();
+    </script>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header"> 
+      <a class="navbar-brand" href="#"><img src = "clockcircle.png" style = "width:30px;" "height: 30px;"></a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href= "test.html">Home</a></li>
+      <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Pill Tracker
+        <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="problem.html">Background</a></li>
+          <li><a href="problem.html">Stories</a></li> 
+        </ul>
+      </li>
+        
+      <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="impact.html">Hydration Tracker
+        <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href= "impact.html">Statistics</a></li>
+          <li><a href="impact.html">Workforce</a></li> 
+        </ul>
+      </li>
+        
+      <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="solution.html">Solution
+        <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="solution.html">Programs</a></li>
+          <li><a href="solution.html">Resources</a></li> 
+        </ul>
+      </li>
+    </ul>
+  </div>
+</nav>
+    
+    
+    
+    <span class="addtocalendar atc-style-blue">
+        <var class="atc_event">
+            <var class="atc_date_start">2016-05-04 12:00:00</var>
+            <var class="atc_date_end">2016-05-04 18:00:00</var>
+            <var class="atc_timezone">Europe/London</var>
+            <var class="atc_title">Star Wars Day Party</var>
+            <var class="atc_description">May the force be with you</var>
+            <var class="atc_location">Tatooine</var>
+            <var class="atc_organizer">Luke Skywalker</var>
+            <var class="atc_organizer_email">luke@starwars.com</var>
+        </var>
+    </span>
+
+    
+    
+
+    
+    
+</body>
+</html>

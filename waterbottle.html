@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script>
+    function myFunction() {
+    var pics = document.getElementById("blah");
+        if (pics.src.match("bottle.png")) {
+            pics.src = "bottle8.png";
+            pics.alt = "bottle8";
+        }
+        else if (pics.src.match("bottle8.png")) {
+            pics.src = "bottle7.png";
+            pics.alt = "bottle7";
+        }
+        else if (pics.src.match("bottle7.png")) {
+            pics.src = "bottle6.png";
+            pics.alt = "bottle6";
+        }
+        else if (pics.src.match("bottle6.png")) {
+            pics.src = "bottle5.png";
+            pics.alt = "bottle5";
+        }
+        else if (pics.src.match("bottle5.png")) {
+            pics.src = "bottle4.png";
+            pics.alt = "bottle4";
+        }
+        else if (pics.src.match("bottle4.png")){
+            pics.src = "bottle3.png";
+            pics.alt = "bottle3";
+        }
+        else if (pics.src.match("bottle3.png")) {
+            pics.src = "bottle2.png";
+            pics.alt = "bottle2";
+        }
+        else if (pics.src.match("bottle2.png")) {
+            pics.src = "bottle1.png";
+            pics.atl = "bottle1";
+        }
+        else {
+            pics.src = "bottle.png";
+            pics.alt = "bottle";
+        }
+        if (pics.src.match("bottle.png")) {
+              alert("You drank all the water you need to drink today!");  
+        }
+    }
+    </script>
+    <style>
+        body {
+            background-color: peachpuff;
+        }
+        
+        .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+    </style>
+    </head>
+    <body>
+    <nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#"><img src = "clockcircle.png" style = "width:30px;" "height: 30px;"></a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="pILL.html">Home</a></li>
+        <li><a href="pilltrackerpage.html">PILL TRACKER</a></li>
+        <li><a href="water.html">HYDRATION TRACKER</a></li>
+      </ul>
+      
+    </div>
+  </div>
+</nav>
+    <center><img id = "blah" onclick = "myFunction()" src = "bottle8.png" alt = "bottle8" style = "width:600px;height:800px;"/> </center>
+     <center> <button onclick = "myFunction()">You drank 8 ounces!</button> </center>
+        
+        </body>
+</html>

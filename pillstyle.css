@@ -1,0 +1,76 @@
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+    
+    /* Add a gray background color and some padding to the footer */
+    footer {
+      
+      padding: 25px;
+    }
+    
+ 
+      body {
+  background-color: peachpuff;
+    background-position: center;
+    background-size: auto;
+    background-repeat:no-repeat;
+    background-attachment: fixed;
+    
+}
+      
+.button {display: inline;
+height: 100px;
+ width: 300px;
+ background: #34696f;
+ border: 2px solid rgba(33, 68, 72, 0.59);
+position: relative;
+    color: rgba(0, 0, 0, 0.55);
+
+ text-align: center;
+ font: bold 3.2em/100px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+left: 80px;
+top: 30px;
+
+}
+
+a.button {
+ text-decoration: none;
+}
+
+h2 {
+         color:black;
+        font-family: 'BebasNeue';
+        font-size: 500%;
+    text-align: center;
+    background-position: center
+}
+
+
+  @font-face {
+    font-family: 'BebasNeue';
+          src: url(BebasNeue.otf); }
+
+
+      h1 {
+          color: black;
+      font-size: 350%;
+    font-family: 'BebasNeue';
+      }
+h4 {
+          color: black;
+      font-size: 400%;
+    font-family: 'BebasNeue';
+      }
+
+p {
+    color: black;
+      font-size: 500%;
+    font-family: 'BebasNeue';
+}
+h5 {
+    color: black;
+      font-size: 500%;
+    font-family: 'BebasNeue';
+}
+
